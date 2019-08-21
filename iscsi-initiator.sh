@@ -1,10 +1,13 @@
 yum install -y iscsi-initiator-utils
-echo "InitiatorName=iqn.2018-01.org.tonneson:rhel7-initiator">/etc/iscsi/initiatorname.iscsi
+# Edit accordingly for target ip address
+TargetIPAddr=192.168.122.55
+
+echo "InitiatorName=iqn.2019-01.com.example:rhel-initiator">/etc/iscsi/initiatorname.iscsi
 systemctl enable iscsi
 systemctl start iscsi
-iscsiadm -m discovery -t st -p 192.168.122.50
-iscsiadm -m node -T iqn.2018-01.org.tonneson:rhel7-target -p 192.168.122.50 -l
+iscsiadm -m discovery -t st -p $TargetIPAddr
+iscsiadm -m node -T iqn.2019-01.com.example:rhel-target -p $TargetIPAddr -l
 echo "UUID=$(blkid /dev/sdb | cut -f2 -d\") /iscsidisk xfs _netdev 0 2">>/etc/fstab
 mkdir /iscsidisk
 mount /iscsidisk 
-touch /iscsidisk/file_from_rhel7_initiator
+touch /iscsidisk/file_from_rhel_initiator
