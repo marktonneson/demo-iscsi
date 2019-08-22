@@ -76,7 +76,7 @@
 ```
       # iscsiadm -m session -P1
 ```
-* Session details, including disk information
+  * Session details, including disk information
 ```
       # iscsiadm -m session -P3
 ```

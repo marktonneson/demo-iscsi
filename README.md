@@ -14,4 +14,4 @@ iSCSI is an acronym for Internet Small Computer Systems Interface, an Internet P
 ### References and Resources
 * [RHEL 7 Storage Administration Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/online-storage-management)
 * [Red Hat Labs - iSCSI Helper](https://access.redhat.com/labs/iscsihelper/)
-* [iSCSI definition via Wikipedia](https://en.wikipedia.org/wiki/ISCSI)
+* \[1\] [iSCSI definition via Wikipedia](https://en.wikipedia.org/wiki/ISCSI)
