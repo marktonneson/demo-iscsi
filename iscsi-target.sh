@@ -1,4 +1,4 @@
-yum install -y targetd targetcli
+yum install -y targetd targetcli || exit 2
 systemctl enable target
 systemctl enable targetd
 systemctl start target
